@@ -28,6 +28,8 @@ class UpdateProjectRequest extends FormRequest
             "category_id" => ["nullable", "exists:categories,id"],
             "description" => [],
             "slug" => [],
+                  'tags' => ['nullable', 'exists:tags,id'],
+
         ];
     }
     public function messages()
@@ -35,6 +37,8 @@ class UpdateProjectRequest extends FormRequest
         return [
             "name.required" => "Nome del progetto obbligatorio",
             "name.string" => "Nome del progetto deve essere una stringa",
+            'tags.exists' => 'I tag inseriti non sono validi',
+
 
             "category_id.exists" => "La categoria inserita non è valida",
         ];

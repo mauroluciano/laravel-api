@@ -28,6 +28,8 @@ class StoreProjectRequest extends FormRequest
             "category_id" => ["nullable", "exists:categories,id"],
             "description" => [],
             "slug" => [],
+            'tags' => ['nullable', 'exists:tags,id'],
+
         ];
     }
 

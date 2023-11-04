@@ -47,6 +47,30 @@
                                     </div>
                                 @enderror
                             </div>
+                            <div class="mb-3 col"><label class="form-label">Tags</label>
+
+                                <div class="form-check @error('tags') is-invalid @enderror p-0">
+                                  @foreach ($tags as $tag)
+                                    <input
+                                      type="checkbox"
+                                      id="tag-{{ $tag->id }}"
+                                      value="{{ $tag->id }}"
+                                      name="tags[]"
+                                      class="form-check-control"
+                                      @if (in_array($tag->id, old('tags', $project_tags ?? []))) checked @endif
+                                    >
+                                    <label for="tag-{{ $tag->id }}">
+                                      {{ $tag->label }}
+                                    </label>
+                                    <br>
+                                  @endforeach
+                                </div>
+                                
+                                @error('tags')
+                                  <div class="invalid-feedback">
+                                    {{ $message }}
+                                  </div>
+                                @enderror</div>
                         </div>
 
                         <div class="mb-3 col-12">
