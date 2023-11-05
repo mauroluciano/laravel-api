@@ -22,7 +22,7 @@ class ProjectSeeder extends Seeder
     {
         $category_ids = Category::all()->pluck('id');
 
-        for ($i = 0; $i < 50; $i++) {
+        for ($i = 0; $i < 20; $i++) {
             $category_id = $faker->randomElement($category_ids);
             $project = new Project();
             $project->category_id = $category_id;

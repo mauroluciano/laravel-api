@@ -18,9 +18,11 @@ class CategorySeeder extends Seeder
     public function run(Faker $faker)
     {
         $_categories = [
-            "FRONT-END",
-            "BACK-END",
-            "FULL-STACK",
+            "Tipo1",
+            "Tipo2",
+            "Tipo3",
+            "Tipo4",
+            "Tipo5",
         ];
         foreach ($_categories as $_category) {
             $category = new Category();
