@@ -63,12 +63,12 @@
                                             <div class="d-flex align-items-center">
                                                 <div>
                                                     <a href="{{ route('admin.projects.edit', $project) }}" class="btn mx-1">
-                                                        <i class="fa-solid fa-pencil" style="color: #1f2e51;"></i>
+                                                        Modifica
                                                     </a>
                                                 </div>
                                                 <div>
                                                     <a href="{{ route('admin.projects.show', $project) }}" class="btn mx-1">
-                                                        <i class="fa-solid fa-eye" style="color: #4d94e7;"></i>
+                                                        Mostra
                                                     </a>
                                                 </div>
                                                 <div>
